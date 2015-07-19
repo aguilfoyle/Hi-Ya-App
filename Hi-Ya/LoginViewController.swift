@@ -24,8 +24,7 @@ class LoginViewController: UIViewController
 
 		self.navigationController?.navigationBar.barTintColor = UIColor(red: 0xfe/255, green: 0x5f/255, blue: 0x55/255, alpha: 1.0)
 		self.backButtonBarItem.tintColor = UIColor.whiteColor()
-//		self.usernameTextBox.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.darkGrayColor()])
-//		self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.darkTextColor()])
+
 	}
 
     override func didReceiveMemoryWarning() 
@@ -36,16 +35,16 @@ class LoginViewController: UIViewController
 	
 	@IBAction func loginButtonTouched(sender: AnyObject) 
 	{		
-		let loginAlertController = UIAlertView(title: "Incorrect Password", message: "Your password was incorrect. Please try again.", delegate: self, cancelButtonTitle: "OK")
+		//let loginAlertController = UIAlertView(title: "Incorrect Password", message: "Your password was incorrect. Please try again.", delegate: self, cancelButtonTitle: "OK")
 		
 		if count == 0
 		{
-			loginAlertController.show()
+			//loginAlertController.show()
 			count = count + 1
 		}
 		else
 		{
-			performSegueWithIdentifier("HiYaVC", sender: nil)
+			performSegueWithIdentifier("instructions", sender: nil)
 		}
 	}
 

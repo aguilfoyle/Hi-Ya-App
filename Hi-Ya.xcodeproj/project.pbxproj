@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF8443471B50CB24008912E6 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8443461B50CB24008912E6 /* InstructionsViewController.swift */; };
+		BF8443491B50E24B008912E6 /* InstructionsHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8443481B50E24B008912E6 /* InstructionsHolderViewController.swift */; };
+		BF84434B1B511339008912E6 /* PremissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84434A1B511339008912E6 /* PremissionsViewController.swift */; };
 		BF9A6E491B501DA600C95307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A6E481B501DA600C95307 /* AppDelegate.swift */; };
 		BF9A6E4B1B501DA600C95307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A6E4A1B501DA600C95307 /* ViewController.swift */; };
 		BF9A6E4E1B501DA600C95307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9A6E4C1B501DA600C95307 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		BF8443461B50CB24008912E6 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		BF8443481B50E24B008912E6 /* InstructionsHolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsHolderViewController.swift; sourceTree = "<group>"; };
+		BF84434A1B511339008912E6 /* PremissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PremissionsViewController.swift; sourceTree = "<group>"; };
 		BF9A6E431B501DA600C95307 /* Hi-Ya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hi-Ya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9A6E471B501DA600C95307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF9A6E481B501DA600C95307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,8 +96,10 @@
 				BF9A6E481B501DA600C95307 /* AppDelegate.swift */,
 				BF9A6E4A1B501DA600C95307 /* ViewController.swift */,
 				BF9A6E6F1B503C7A00C95307 /* LoginViewController.swift */,
-				BF9A6E711B504B8C00C95307 /* HiYaViewController.swift */,
+				BF8443481B50E24B008912E6 /* InstructionsHolderViewController.swift */,
 				BF8443461B50CB24008912E6 /* InstructionsViewController.swift */,
+				BF84434A1B511339008912E6 /* PremissionsViewController.swift */,
+				BF9A6E711B504B8C00C95307 /* HiYaViewController.swift */,
 				BF9A6E4C1B501DA600C95307 /* Main.storyboard */,
 				BF9A6E4F1B501DA600C95307 /* Images.xcassets */,
 				BF9A6E511B501DA600C95307 /* LaunchScreen.xib */,
@@ -234,8 +240,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9A6E701B503C7A00C95307 /* LoginViewController.swift in Sources */,
+				BF8443491B50E24B008912E6 /* InstructionsHolderViewController.swift in Sources */,
 				BF9A6E721B504B8C00C95307 /* HiYaViewController.swift in Sources */,
 				BF9A6E4B1B501DA600C95307 /* ViewController.swift in Sources */,
+				BF84434B1B511339008912E6 /* PremissionsViewController.swift in Sources */,
 				BF9A6E491B501DA600C95307 /* AppDelegate.swift in Sources */,
 				BF8443471B50CB24008912E6 /* InstructionsViewController.swift in Sources */,
 			);
