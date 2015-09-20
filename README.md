@@ -9,11 +9,11 @@ the 'steps data' in-order to display that information within a friend's Hi-Ya ap
 ## Code Example
 
 I took inspiration for my app from two applications, 'Yo' and 'Snap Chat'. 
-#### Here is the log in view: 
+#### Image 1: The log in view for the user: Utilizing UIButtons
 ![alt tag](https://github.com/aguilfoyle/HiYa-App/blob/InstructionsContainerTest/README%20Images/Hi-Ya_Login.png)
-#### Here is the asking for permissions view: It uses UISwipeGestures
+#### Image 2: The app asking for permission to use HealthKit: Utilizing UISwipeGestures
 ![alt tag](https://github.com/aguilfoyle/HiYa-App/blob/InstructionsContainerTest/README%20Images/Hi-Ya_Permissions.gif)
-#### Using and experimenting with UIScrollViews: Incorporates a hamburger menu and pull down friends setting
+#### Image 3: Using and experimenting with UIScrollViews: Incorporates a hamburger menu and pull down for friends settings
 ![alt tag](https://github.com/aguilfoyle/HiYa-App/blob/InstructionsContainerTest/README%20Images/Hi-Ya_ScrollView.gif)
 
 ## Motivation
