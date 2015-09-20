@@ -1,25 +1,44 @@
-//
-//  InstructionsViewController.swift
-//  Hi-Ya
-//
-//  Created by Alan Guilfoyle on 7/10/15.
-//  Copyright (c) 2015 Uber Gucci. All rights reserved.
-//
+/***************************************************************
+*   PROJECT: Hi-Ya
+*	CLASS: InstructionsViewController.swift
+*
+*   Created by Alan Guilfoyle on 7/10/15.
+*   Copyright (c) 2015 Think Thrice Tech. All rights reserved.
+***************************************************************/
 
+// *** IMPORT(S) ***
 import UIKit
 
 
+
+/***************************************************************
+* CLASS: InstructionsViewController | IMPORTED: UIViewController
+* PURPOSE: This class is the viewcontroller for handling the 
+*		prompt of the instructions / user agreement for allowing
+*		me to use their healthKit information.
+***************************************************************/
 class InstructionsViewController: UIViewController 
 {	
-	//var delegate: DetailsDelegate!
+	// *** VARIABLE(S) ***
+	//UILabel(s)
 	@IBOutlet var lebel1: UILabel!
 	@IBOutlet var label2: UILabel!
 	@IBOutlet var label3: UILabel!
+	//UIScrollView(s)
 	@IBOutlet var scrollView: UIScrollView!
+	//UIView(s)
 	@IBOutlet var instructionsView1: UIView!
 	@IBOutlet var instructionsView2: UIView!
 	@IBOutlet var instructionsView3: UIView!
 	
+	
+	
+	// MARK: - Override Functions
+	/***************************************************************
+	* FUNC: viewDidLoad | PARAM: None | RETURN: Void 
+	* PURPOSE: This method is called after the view controller has 
+	*		loaded its view hierarchy into memory.
+	***************************************************************/
     override func viewDidLoad() 
 	{
         super.viewDidLoad()
@@ -46,12 +65,44 @@ class InstructionsViewController: UIViewController
 		self.label3.backgroundColor = UIColor.whiteColor()
     }
 
+	
+	
+	/***************************************************************
+	* FUNC: didReceiveMemoryWarning | PARAM: None | RETURN: Void 
+	* PURPOSE: Sent to the view controller when the app receives a 
+	*		memory warning.
+	***************************************************************/
     override func didReceiveMemoryWarning() 
 	{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+	
+	
+	/***************************************************************
+	* FUNC: prepareForSegue | PARAM: AnyObject | RETURN: Void 
+	* PURPOSE:  Notifies the view controller that a segue is about 
+	*		to be performed.
+	***************************************************************/
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) 
+	{
+		if segue.identifier == "DelegateDismiss" 
+		{
+			var viewControllerB = segue.destinationViewController as! InstructionsHolderViewController
+			viewControllerB.dismissSV()
+		}
+	}
+	
+	
+	
+	// MARK: - Standard Functions
+	/***************************************************************
+	* FUNC: handleSwipe1 | PARAM: UISwipeGestureRecognizer | 
+	* RETURN: Void 
+	* PURPOSE: This function will hand recieving swipe gestures made
+	*		by the user.
+	***************************************************************/
 	func handleSwipe1(event: UISwipeGestureRecognizer)
 	{
 		if event.direction == UISwipeGestureRecognizerDirection.Left
@@ -64,6 +115,14 @@ class InstructionsViewController: UIViewController
 		}
 	}
 	
+	
+	
+	/***************************************************************
+	* FUNC: handleSwipe2 | PARAM: UISwipeGestureRecognizer | 
+	* RETURN: Void 
+	* PURPOSE: This function will hand recieving swipe gestures made
+	*		by the user. 
+	***************************************************************/
 	func handleSwipe2(event: UISwipeGestureRecognizer)
 	{
 		if event.direction == UISwipeGestureRecognizerDirection.Left
@@ -76,33 +135,27 @@ class InstructionsViewController: UIViewController
 		}
 	}
 
+	
+	
+	// MARK: - IBAction Functions
+	/***************************************************************
+	* FUNC: dismissSVButtonClicked | PARAM: AnyObject | RETURN: Void 
+	* PURPOSE: When pressed this will trigger a segue to begin.
+	***************************************************************/
 	@IBAction func dismissSVButtonClicked(sender: AnyObject) 
 	{		
 		self.performSegueWithIdentifier("DelegateDismiss", sender: self)
 	}
 	
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) 
-	{
-		if segue.identifier == "DelegateDismiss" 
-		{
-			var viewControllerB = segue.destinationViewController as! InstructionsHolderViewController
-			viewControllerB.dismissSV()
-		}
-	}
 	
+	
+	/***************************************************************
+	* FUNC: testButtonClicked | PARAM: AnyObject | RETURN: Void 
+	* PURPOSE: When pressed this will trigger the movement of the 
+	*		scrollView. It will animate and move -800 on the y axis.
+	***************************************************************/
 	@IBAction func testButtonClicked(sender: AnyObject) 
 	{
 		self.scrollView.setContentOffset(CGPointMake(341, 0), animated: true)
 	}
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
