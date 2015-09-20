@@ -26,7 +26,7 @@ As mentioned earlier this project is optimized for xCode 6 and uses Swift 1.0. I
 
 ## Contributors
 
-This project was created solo by Alan Guilfoyle during a 2015 Humana Hack-a-thon.
+This project was created sololy by Alan Guilfoyle in 2015 during the Humana Hack-a-thon.
 
 ## License
 
